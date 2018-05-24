@@ -1,0 +1,280 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "Unit7.h"
+#include "Unit9.h"
+#include "Unit6.h"
+#include "Unit5.h"
+#include "Unit8.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+int s=0, i=0, pravil_otvet, nomer=0;
+
+TForm7 *Form7;
+//---------------------------------------------------------------------------
+__fastcall TForm7::TForm7(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm7::Button1Click(TObject *Sender)
+{
+if(RadioButton1->Checked==true)i=1;
+ if(RadioButton2->Checked==true)i=2;
+ if(RadioButton3->Checked==true)i=3;
+ if(RadioButton4->Checked==true)i=4;
+ if(i==pravil_otvet)s++; i=0;
+ RadioButton1->Checked=false;
+ RadioButton2->Checked=false;
+ RadioButton3->Checked=false;
+ RadioButton4->Checked=false;
+  nomer++;
+
+  switch(nomer)
+{
+  case 1:  Form7->Label7->Caption= nomer+1;
+
+           Form7->Label5->Caption="Вигук - це службова частина мови, яка: ";
+           Form7->Label1->Caption="вживається для з'єднання слів у реченні";
+           Form7->Label2->Caption="вносить різні додаткові відтінки значення в речення";
+           Form7->Label3->Caption="виражає почуття, волевиявлення мовця, не називаючи їх";
+           Form7->Label4->Caption="виражає залежність іменника від інших слів у словосполученні";
+           pravil_otvet=3;
+
+
+           Form7->Label5->Font->Size = 12;
+           Form7->Label1->Font->Size = 12;
+           Form7->Label2->Font->Size = 12;
+           Form7->Label3->Font->Size = 12;
+           Form7->Label4->Font->Size = 12;
+                   break;
+
+           case 2:  Form7->Label7->Caption= nomer+1;
+
+           Form7->Label5->Caption="Дієприкметник - це: ";
+           Form7->Label1->Caption="особлива форма дієслова, яка має ознаку предмета за дією або станом";
+           Form7->Label2->Caption="особлива, незмінна форма дієслова, яка означає дію";
+           Form7->Label3->Caption="невідмінювана частина мови, яка виражає ознаку дії, предмета чи іншої ознаки";
+           Form7->Label4->Caption="немає правильної відповіді";
+           pravil_otvet=1;
+
+
+           Form7->Label5->Font->Size = 12;
+           Form7->Label1->Font->Size = 12;
+           Form7->Label2->Font->Size = 12;
+           Form7->Label3->Font->Size = 12;
+           Form7->Label4->Font->Size = 12;
+                   break;
+
+           case 3:  Form7->Label7->Caption= nomer+1;
+
+           Form7->Label5->Caption="Дієприслівниковий зворот - це:";
+           Form7->Label1->Caption="дієприкметник з іменником";
+           Form7->Label2->Caption="дієприкметник з займенником";
+           Form7->Label3->Caption="дієприкметник з прислівником";
+           Form7->Label4->Caption="дієприкметник з залежними словами";
+           pravil_otvet=4;
+
+
+           Form7->Label5->Font->Size = 12;
+           Form7->Label1->Font->Size = 12;
+           Form7->Label2->Font->Size = 12;
+           Form7->Label3->Font->Size = 12;
+           Form7->Label4->Font->Size = 12;
+                   break;
+
+
+          case 4:  Form7->Label7->Caption= nomer+1;
+
+           Form7->Label5->Caption="Дієслово - це частина мови, яка:";
+           Form7->Label1->Caption="виражає ознаку дії, предмета чи іншої ознаки";
+           Form7->Label2->Caption="означає дію або стан предмета";
+           Form7->Label3->Caption="означає назву предмета";
+           Form7->Label4->Caption="означає назву ознаки предмета або його приналежності";
+           pravil_otvet=2;
+
+
+           Form7->Label5->Font->Size = 12;
+           Form7->Label1->Font->Size = 12;
+           Form7->Label2->Font->Size = 12;
+           Form7->Label3->Font->Size = 12;
+           Form7->Label4->Font->Size = 12;
+                   break;
+
+           case 5:  Form7->Label7->Caption= nomer+1;
+
+           Form7->Label5->Caption="Вкажіть рядок, у якому всі дієслова доконаного виду:";
+           Form7->Label1->Caption="пообіцяла, стояли, доказати";
+           Form7->Label2->Caption="падало, мріяв, вміти";
+           Form7->Label3->Caption="люблю, думав, відпочивати";
+           Form7->Label4->Caption="прочитав, відвідала, забули";
+           pravil_otvet=4;
+
+
+           Form7->Label5->Font->Size = 12;
+           Form7->Label1->Font->Size = 12;
+           Form7->Label2->Font->Size = 12;
+           Form7->Label3->Font->Size = 12;
+           Form7->Label4->Font->Size = 12;
+                   break;
+
+
+           case 6:  Form7->Label7->Caption= nomer+1;
+
+           Form7->Label5->Caption="Знайдіть речення дієприкметниковим зворотом: ";
+           Form7->Label1->Caption="Добріє світ народжений в любові. (Т. Коломієць)";
+           Form7->Label2->Caption="Я хочу бачити світ розплющеними очима… (І. Драч)";
+           Form7->Label3->Caption="Спорожнілий колос стоїть вищий за всіх. (Народна творчість)";
+           Form7->Label4->Caption="Згаяного часу і конем не наздоженеш. (Народна творчість)";
+           pravil_otvet=1;
+
+
+           Form7->Label5->Font->Size = 12;
+           Form7->Label1->Font->Size = 12;
+           Form7->Label2->Font->Size = 12;
+           Form7->Label3->Font->Size = 12;
+           Form7->Label4->Font->Size = 12;
+                   break;
+
+
+            case 7:  Form7->Label7->Caption= nomer+1;
+
+           Form7->Label5->Caption="Вкажіть рядок, у якому всі дієслова є неперехідними:";
+           Form7->Label1->Caption=" пташки співають, вчитися добре";
+           Form7->Label2->Caption="дерева ростуть, діти сміються";
+           Form7->Label3->Caption="квіти цвітуть, учень виконує вправу";
+           Form7->Label4->Caption="сонечко сміється, слухати батьків";
+           pravil_otvet=2;
+
+
+           Form7->Label5->Font->Size = 12;
+           Form7->Label1->Font->Size = 12;
+           Form7->Label2->Font->Size = 12;
+           Form7->Label3->Font->Size = 12;
+           Form7->Label4->Font->Size = 12;
+                   break;
+
+          
+           case 8:  Form7->Label7->Caption= nomer+1;
+
+           Form7->Label5->Caption="Вкажіть рядок, у якому всі дієслова 1 дієвідміни:";
+           Form7->Label1->Caption=" говорити, ходити, кричати, стати";
+           Form7->Label2->Caption="вчити, малювати, працювати, спати";
+           Form7->Label3->Caption="бігти, сидіти, любити, боротися";
+           Form7->Label4->Caption="мати, везти, казати, іти";
+           pravil_otvet=4;
+
+
+           Form7->Label5->Font->Size = 12;
+           Form7->Label1->Font->Size = 12;
+           Form7->Label2->Font->Size = 12;
+           Form7->Label3->Font->Size = 12;
+           Form7->Label4->Font->Size = 12;
+                   break;
+           case 9:  Form7->Label7->Caption= nomer+1;
+
+           Form7->Label5->Caption="Вкажіть рядок, у якому всі дієслова наказового способу:";
+           Form7->Label1->Caption="ходи, мріятиму, учили б, довелося";
+           Form7->Label2->Caption="порадь, покладу, казала б, встанемо";
+           Form7->Label3->Caption="лети, відчинімо, встаньте, слухай";
+           Form7->Label4->Caption="їж, запитав би, покладу, працював би";
+           pravil_otvet=3;
+
+
+           Form7->Label5->Font->Size = 12;
+           Form7->Label1->Font->Size = 12;
+           Form7->Label2->Font->Size = 12;
+           Form7->Label3->Font->Size = 12;
+           Form7->Label4->Font->Size = 12;
+                   break;
+
+          case 10:  Form7->Label7->Caption= nomer+1;
+
+           Form7->Label5->Caption="Сполучник - це службова частина мови, яка:";
+           Form7->Label1->Caption="виражає почуття, спонукання до дії, але не називає їх";
+           Form7->Label2->Caption="вживається для з'єднання однорідних членів речення ";
+           Form7->Label3->Caption="виражає залежність іменника від інших слів у словосполученні";
+           Form7->Label4->Caption="немає правильної відповіді";
+           pravil_otvet=2;
+
+
+           Form7->Label5->Font->Size = 12;
+           Form7->Label1->Font->Size = 12;
+           Form7->Label2->Font->Size = 12;
+           Form7->Label3->Font->Size = 12;
+           Form7->Label4->Font->Size = 12;
+                   break;
+  case 11:
+  Button1->Enabled=false;
+                   break;
+}
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm7::Button2Click(TObject *Sender)
+{
+Form7-> Hide();
+Form9-> Show();
+Form9->Label2->Caption=s;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm7::N2Click(TObject *Sender)
+{
+Form7 -> Hide();
+Form5 -> Show();
+Form5->Label5->Caption="Зведіть подібні доданки : –6х + 4у + 8х – 2у";
+           Form5->Label1->Caption="2х + 6у";
+           Form5->Label2->Caption="2х + 2у";
+           Form5->Label3->Caption="14х + 2у";
+           Form5->Label4->Caption="4x+6y";
+           pravil_otvet=2;
+           Form5->Label5->Font->Size = 12;
+           Form5->Label1->Font->Size = 12;
+           Form5->Label2->Font->Size = 12;
+           Form5->Label3->Font->Size = 12;
+           Form5->Label4->Font->Size = 12;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm7::N3Click(TObject *Sender)
+{
+Form7 -> Hide();
+Form6 -> Show();
+
+Form6->Label5->Caption="Хто з цих князів не належав до династії Рюриковичів?";
+           Form6->Label1->Caption="Мономах";
+           Form6->Label2->Caption="Ізяслав";
+           Form6->Label3->Caption="Володимир";
+           Form6->Label4->Caption="Усі з вказаних";
+           pravil_otvet=3;
+           Form6->Label5->Font->Size = 12;
+           Form6->Label1->Font->Size = 12;
+           Form6->Label2->Font->Size = 12;
+           Form6->Label3->Font->Size = 12;
+           Form6->Label4->Font->Size = 12;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm7::N4Click(TObject *Sender)
+{
+Form7 -> Hide();
+Form8 -> Show();
+
+
+           Form8->Label5->Caption="Чому у риб холодна кров: ";
+           Form8->Label1->Caption="живуть у холодній воді";
+           Form8->Label2->Caption="залежить від виду";
+           Form8->Label3->Caption="кров змішана";
+           Form8->Label4->Caption="низький рівень обміну речовин";
+           pravil_otvet=4;
+
+
+           Form8->Label5->Font->Size = 12;
+           Form8->Label1->Font->Size = 12;
+           Form8->Label2->Font->Size = 12;
+           Form8->Label3->Font->Size = 12;
+           Form8->Label4->Font->Size = 12;
+}
+//---------------------------------------------------------------------------
